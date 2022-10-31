@@ -1,0 +1,27 @@
+<div mat-dialog-content>
+  <p>Add a New Employee</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Id</mat-label>
+    <input matInput [(ngModel)]="data.empId" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="data.empName" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Status</mat-label>
+    <input matInput [(ngModel)]="data.status" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Designation</mat-label>
+    <input matInput [(ngModel)]="data.designation" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Address</mat-label>
+    <input matInput [(ngModel)]="data.address" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</div>
